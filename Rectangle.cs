@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    public class Rectangle : Shape, ISharpenable
+
+    {
+        public double Width { get; set; }
+        public double Height { get; set; }
+
+        public Rectangle(double width, double height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        public override double GetArea()
+        {
+            return Width * Height;
+        }
+
+        public override double GetPerimeter()
+        {
+            return 2 * (Width + Height);
+        }
+
+        public void Sharpen()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"Id: {Id}, Color: {Color}, Width: {Width}, Height: {Height}";
+        }
+    }
+}
